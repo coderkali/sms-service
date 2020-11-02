@@ -10,6 +10,5 @@ public class ModelMapperImpl {
 	ModelMapper modelMapper;
 	public Object convert(Object source,Class clazz) {
 		return modelMapper.map(source, clazz);
-		
 	}
 }
