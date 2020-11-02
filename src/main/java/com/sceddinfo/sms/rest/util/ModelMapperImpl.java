@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class ModelMapperImpl {
+
 	@Autowired
 	ModelMapper modelMapper;
 	public Object convert(Object source,Class clazz) {
