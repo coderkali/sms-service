@@ -9,7 +9,7 @@ public class ModelMapperImpl {
 
 	@Autowired
 	ModelMapper modelMapper;
-	public Object convert(Object source,Class clazz) {
+	public <T> Object convert(Object source,Class<T> clazz) {
 		return modelMapper.map(source, clazz);
 	}
 }
