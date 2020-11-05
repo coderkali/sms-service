@@ -15,8 +15,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper=false)
 @Entity
-@Table(name="Registerd_User")
-public class User extends BaseEntity {
+@Table(name="Registered_User")
+public class RegisteredUser extends BaseEntity {
 
 	private static final long serialVersionUID = -6603441918065684365L;
 	

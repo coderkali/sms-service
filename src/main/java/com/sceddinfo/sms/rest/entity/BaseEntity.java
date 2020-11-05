@@ -1,11 +1,13 @@
 package com.sceddinfo.sms.rest.entity;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,19 +21,52 @@ import lombok.NoArgsConstructor;
 public class BaseEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
-	@Column(name="Created_By")
+
+	@Column(name = "Created_By")
 	private String createdBy;
-	
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="Created_Date")
+
+	@Temporal(TemporalType.DATE)
+	@DateTimeFormat()
+	@Column(name = "Created_Date")
 	private Date createdDate;
-	
-	@Column(name="Modified_By")
+
+	@Column(name = "Modified_By")
 	private String modifiedBy;
-	
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="Modified_Date")
+
+	@Temporal(TemporalType.DATE)
+	@Column(name = "Modified_Date")
 	private Date modifiedDate;
+
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+
+	public String getModifiedBy() {
+		return modifiedBy;
+	}
+
+	public void setModifiedBy(String modifiedBy) {
+		this.modifiedBy = modifiedBy;
+	}
+
+	public Date getModifiedDate() {
+		return modifiedDate;
+	}
+
+	public void setModifiedDate(Date modifiedDate) {
+		this.modifiedDate = modifiedDate;
+	}
 
 }
