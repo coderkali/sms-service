@@ -1,7 +1,7 @@
 package com.sceddinfo.sms.rest.entity;
 
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Temporal;
@@ -25,15 +25,14 @@ public class BaseEntity implements Serializable {
 	@Column(name = "Created_By")
 	private String createdBy;
 
-	@Temporal(TemporalType.DATE)
-	@DateTimeFormat()
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "Created_Date")
 	private Date createdDate;
 
 	@Column(name = "Modified_By")
 	private String modifiedBy;
 
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column(name = "Modified_Date")
 	private Date modifiedDate;
 

@@ -13,10 +13,10 @@ public class UserRoleDTO extends BaseDTO {
 
 	private static final long serialVersionUID = -4908641079956173381L;
 
-	private String userRoleId;
+	private Long userRoleId;
 
-	private String userId;
+	private Long userId;
 
-	private String roleId;
+	private Long roleId;
 
 }

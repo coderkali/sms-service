@@ -1,9 +1,6 @@
 package com.sceddinfo.sms.rest.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,12 +22,13 @@ public class UserPermission extends BaseEntity {
 
 	@Column(name = "User_Permission_Id")
 	@Id
-	private String userPermissionId;
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	private Long userPermissionId;
 
 	@Column(name = "User_Id")
-	private String userId;
+	private Long userId;
 
 	@Column(name = "Permission_Id")
-	private String permissionId;
+	private Long permissionId;
 
 }

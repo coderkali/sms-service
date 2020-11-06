@@ -1,9 +1,6 @@
 package com.sceddinfo.sms.rest.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.sceddinfo.sms.rest.entity.BaseEntity;
 import lombok.AllArgsConstructor;
@@ -23,7 +20,8 @@ public class Address extends BaseEntity {
 
 	@Column(name = "Address_Id")
 	@Id
-	private String addressId;
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	private Long addressId;
 
 	@Column(name = "Address")
 	private String address;

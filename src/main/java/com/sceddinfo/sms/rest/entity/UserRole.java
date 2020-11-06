@@ -1,9 +1,6 @@
 package com.sceddinfo.sms.rest.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,12 +19,13 @@ public class UserRole extends BaseEntity {
 
 	@Column(name = "User_Role_Id")
 	@Id
-	private String userRoleId;
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	private Long userRoleId;
 
 	@Column(name = "User_Id")
-	private String userId;
+	private Long userId;
 
 	@Column(name = "Role_Id")
-	private String roleId;
+	private Long roleId;
 
 }

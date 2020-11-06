@@ -1,9 +1,6 @@
 package com.sceddinfo.sms.rest.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,10 +19,11 @@ public class Registration extends BaseEntity {
 
 	@Column(name = "Red_Id")
 	@Id
-	private String regId;
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	private Long regId;
 
 	@Column(name = "User_Role_Id")
-	private String userRoleId;
+	private Long userRoleId;
 
 	@Column(name = "Full_Name")
 	private String fullName;
@@ -37,6 +35,6 @@ public class Registration extends BaseEntity {
 	private String emailId;
 
 	@Column(name = "Address_Id")
-	private String addressId;
+	private Long addressId;
 
 }

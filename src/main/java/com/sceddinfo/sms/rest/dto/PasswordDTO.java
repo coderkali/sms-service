@@ -13,7 +13,7 @@ public class PasswordDTO extends BaseDTO {
 
 	private static final long serialVersionUID = 1670126716342113115L;
 
-	private String passwordId;
+	private Long passwordId;
 
 	private String password;
 

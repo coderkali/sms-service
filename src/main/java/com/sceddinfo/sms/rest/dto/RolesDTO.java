@@ -9,9 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class RolesDTO {
+public class RolesDTO extends  BaseDTO {
 
-	private String roleId;
+	private static final long serialVersionUID = 1753696150313210677L;
+
+	private Long roleId;
 
 	private String roleDesc;
 

@@ -13,7 +13,7 @@ public class CategoryDTO extends BaseDTO {
 
 	private static final long serialVersionUID = 5022345454957102726L;
 
-	private String categoryId;
+	private Long categoryId;
 
 	private String categoryDesc;
 

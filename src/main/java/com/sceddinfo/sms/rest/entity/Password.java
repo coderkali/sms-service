@@ -1,9 +1,6 @@
 package com.sceddinfo.sms.rest.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.sceddinfo.sms.rest.entity.BaseEntity;
 import lombok.AllArgsConstructor;
@@ -26,12 +23,17 @@ public class Password extends BaseEntity {
 
 	@Column(name = "Password_Id")
 	@Id
-	private String passwordId;
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	private Long passwordId;
 
 	@Column(name = "Password")
 	private String password;
 
 	@Column(name = "User_Id")
-	private String userId;
+	private Long userId;
+
+	//@OneToOne
+    //@JoinColumn(name = "User_Id",referencedColumnName="User_Id")
+	//private RegisteredUser regUser;
 
 }

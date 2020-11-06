@@ -11,17 +11,17 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = false)
-public class PermissionDTO extends BaseDTO {
+public class PermissionDTO {
 
 	private static final long serialVersionUID = 3253936033227763562L;
 
-	private String permissionId;
+	private Long permissionId;
 
-	public String getPermissionId() {
+	public Long getPermissionId() {
 		return permissionId;
 	}
 
-	public void setPermissionId(String permissionId) {
+	public void setPermissionId(Long permissionId) {
 		this.permissionId = permissionId;
 	}
 

@@ -15,11 +15,11 @@ public class RegisteredUserDTO extends BaseDTO {
 
 	private static final long serialVersionUID = -7909389221793837878L;
 
-	private String userId;
+	private Long userId;
 	
-	private String regId;
+	private Long regId;
 	
-	private String isActive;
+	private Long isActive;
 	
 	private String firtTimeLogin;
 

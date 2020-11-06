@@ -13,10 +13,10 @@ public class UserPermissionDTO extends BaseDTO {
 
 	private static final long serialVersionUID = -8789129748154886359L;
 
-	private String userPermissionId;
+	private Long userPermissionId;
 
-	private String userId;
+	private Long userId;
 
-	private String permissionId;
+	private Long permissionId;
 
 }

@@ -28,7 +28,7 @@ public class PermissionServieImpl implements PermissionServiceI {
 	@Override
 	public PermissionDTO getPermission(String permId) throws EntityNotFoundException {
 		return (PermissionDTO) modelmapper.convert(
-				permServiceRepo.findById(permId).orElseThrow(() -> new EntityNotFoundException()), PermissionDTO.class);
+				permServiceRepo.findById(permId).orElseThrow(EntityNotFoundException::new), PermissionDTO.class);
 
 	}
 

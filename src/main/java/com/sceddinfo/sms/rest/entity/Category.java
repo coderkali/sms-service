@@ -1,9 +1,6 @@
 package com.sceddinfo.sms.rest.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,7 +19,8 @@ public class Category extends BaseEntity {
 
 	@Column(name = "Category_Id")
 	@Id
-	private String categoryId;
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	private Long categoryId;
 
 	@Column(name = "Category_Desc")
 	private String categoryDesc;

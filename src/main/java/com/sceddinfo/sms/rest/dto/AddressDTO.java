@@ -13,14 +13,14 @@ public class AddressDTO extends BaseDTO {
 
 	private static final long serialVersionUID = -3214541158617802247L;
 
-	private String addressId;
-	
+	private Long addressId;
+
 	private String address;
-	
+
 	private String city;
-	
+
 	private String state;
-	
+
 	private String pincode;
 
 }

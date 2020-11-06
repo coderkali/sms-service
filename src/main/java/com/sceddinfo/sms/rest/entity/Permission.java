@@ -1,10 +1,6 @@
 package com.sceddinfo.sms.rest.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.sceddinfo.sms.rest.entity.BaseEntity;
 import org.hibernate.annotations.GenericGenerator;
@@ -25,19 +21,18 @@ public class Permission extends BaseEntity {
 	private static final long serialVersionUID = -7042685098683711987L;
 
 	@Id
-	 @GeneratedValue(generator="system-uuid")
-	@GenericGenerator(name="system-uuid", strategy = "uuid")
 	@Column(name = "Permission_Id")
-	private String permissionId;
+	@GeneratedValue(strategy= GenerationType.AUTO)
+	private Long permissionId;
 
 	@Column(name = "Permission_Desc")
 	private String permissionDesc;
 
-	public String getPermissionId() {
+	public Long getPermissionId() {
 		return permissionId;
 	}
 
-	public void setPermissionId(String permissionId) {
+	public void setPermissionId(Long permissionId) {
 		this.permissionId = permissionId;
 	}
 

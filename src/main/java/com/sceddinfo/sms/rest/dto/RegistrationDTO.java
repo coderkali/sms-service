@@ -13,9 +13,9 @@ public class RegistrationDTO extends BaseDTO {
 	
 	private static final long serialVersionUID = 4433102851582968952L;
 
-	private String regId;
+	private Long regId;
 
-	private String userRoleId;
+	private Long userRoleId;
 
 	private String fullName;
 
