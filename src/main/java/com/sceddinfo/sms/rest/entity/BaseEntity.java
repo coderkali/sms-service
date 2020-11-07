@@ -4,9 +4,13 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import lombok.AllArgsConstructor;
@@ -18,6 +22,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@MappedSuperclass
 public class BaseEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -26,6 +31,7 @@ public class BaseEntity implements Serializable {
 	private String createdBy;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@UpdateTimestamp
 	@Column(name = "Created_Date")
 	private Date createdDate;
 
@@ -33,6 +39,7 @@ public class BaseEntity implements Serializable {
 	private String modifiedBy;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@UpdateTimestamp
 	@Column(name = "Modified_Date")
 	private Date modifiedDate;
 

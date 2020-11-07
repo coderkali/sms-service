@@ -1,7 +1,9 @@
 package com.sceddinfo.sms.rest.controller;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.ToString;
 
+@ToString
 public class Greeting {
 
     @ApiModelProperty(notes = "Provided user name", required =true)

@@ -24,13 +24,13 @@ public class BaseDTO implements Serializable {
 	@JsonInclude(Include.NON_EMPTY)
 	private String createdBy;
 	
-	@JsonIgnore
+
 	private Date createdDate;
 	
 	@JsonInclude(Include.NON_EMPTY)
 	private String modifiedBy;
 	
-	@JsonIgnore
+
 	private Date modifiedDate;
 
 	public String getCreatedBy() {
