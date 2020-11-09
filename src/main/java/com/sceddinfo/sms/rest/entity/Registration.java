@@ -3,6 +3,7 @@ package com.sceddinfo.sms.rest.entity;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -30,6 +31,9 @@ public class Registration extends BaseEntity {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long regId;
 
+	@Column(name = "User_Role_Id")
+	private Long userRoleId;
+
 	@Column(name = "Full_Name")
 	private String fullName;
 
@@ -39,11 +43,8 @@ public class Registration extends BaseEntity {
 	@Column(name = "Email_Id")
 	private String emailId;
 
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "Address_Id", referencedColumnName="Address_Id")
-	private Address addressId;
-
-	@OneToOne(mappedBy = "registration")
-	private RegisteredUser regUser;
+	@OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumn(name = "Address_Id", referencedColumnName = "Address_Id", unique = true)
+	private Address address;
 
 }

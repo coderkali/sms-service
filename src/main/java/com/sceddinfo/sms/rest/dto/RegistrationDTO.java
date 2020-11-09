@@ -23,6 +23,6 @@ public class RegistrationDTO extends BaseDTO {
 
 	private String emailId;
 
-	private String addressId;
+	private AddressDTO addressDto;
 
 }

@@ -24,7 +24,6 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = false)
 @Entity
 @Table(name = "Permission")
-@Component
 public class Permission extends BaseEntity {
 
 	private static final long serialVersionUID = -7042685098683711987L;
@@ -36,8 +35,5 @@ public class Permission extends BaseEntity {
 
 	@Column(name = "Permission_Desc")
 	private String permissionDesc;
-
-	/*@OneToMany(mappedBy = "permissionId", cascade= CascadeType.ALL)
-	private Set<UserPermission> userRole;*/
 
 }
